@@ -1,5 +1,7 @@
 import axios from "./axios";
 
 
-export const TurnoRequest = async (turno) => axios.post("/turnos", turno);
+const API ='http://localhost:3000/api'
 
+
+export const TurnoRequest = async (turno) => axios.post("/turnos", turno);

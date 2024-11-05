@@ -16,10 +16,14 @@ export function TurnoProvider({children}){
 
     const [Turno, setTurno]= useState([])
 
-    const crearTurno= async (turno)=>{
-        const res= await TurnoRequest(turno) 
-        console.log(res)
-    }
+    const crearTurno = async (turno) => {
+        try {
+            const res = await TurnoRequest(turno);
+            console.log(res.data);
+        } catch (error) {
+            console.log("no funciona");
+        }
+    };
     return (
         <TurnoContext.Provider
             value={{Turno,
